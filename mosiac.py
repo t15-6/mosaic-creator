@@ -155,7 +155,19 @@ mosaic_image = createPhotomosaic(target_image, input_images, grid_size, reuse_im
 
 # write out mosaic
 mosaic_image.save(output_filename, 'jpeg')
-im = Image.open(r"/content/mosaic-creator/Mosaic.jpeg")  
+
+import glob, os
+from PIL import Image
+os.chdir("/content/mosaic-creator")
+
+for file in glob.glob("*.jpeg"):
+    if file.endswith(".jpeg"):
+        img = Image.open(file)
+
+for file1 in glob.glob("*.jpg"):
+    if file1.endswith(".jpg"):
+        img = Image.open(file1)
+        
   
 im.show()
 #print("saved output to %s" % (output_filename,))
