@@ -155,7 +155,7 @@ mosaic_image = createPhotomosaic(target_image, input_images, grid_size, reuse_im
 
 # write out mosaic
 mosaic_image.save(output_filename, 'jpeg')
-im = Image.open(r"/content/drive/My Drive/Mosaic.jpeg")  
+im = Image.open(r"/content/mosaic-creator/Mosaic.jpeg")  
   
 im.show()
 #print("saved output to %s" % (output_filename,))
