@@ -169,6 +169,6 @@ for file1 in glob.glob("*.jpg"):
         img = Image.open(file1)
         
   
-im.show()
+
 #print("saved output to %s" % (output_filename,))
 #print('done.')
